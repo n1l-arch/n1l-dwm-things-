@@ -5,13 +5,13 @@ static const unsigned int borderpx  = 2;        /* border pixel of windows */
 static const unsigned int snap      = 32;       /* snap pixel */
 static const int showbar            = 1;        /* 0 means no bar */
 static const int topbar             = 1;        /* 0 means bottom bar */
-static const char *fonts[]          = { "monospace:size=10" };
-static const char dmenufont[]       = "monospace:size=10";
+static const char *fonts[]          = { "Source code pro:size=10" };
+static const char dmenufont[]       = "Source code pro:size=10";
 static const char col_gray1[]       = "#161616";
 static const char col_gray2[]       = "#1c1c1c";
 static const char col_gray3[]       = "#bbbbbb";
 static const char col_gray4[]       = "#eeeeee";
-static const char col_cyan[]        = "#715e7c";
+static const char col_cyan[]        = "#4a434e";
 static const char *colors[][3]      = {
 	/*               fg         bg         border   */
 	[SchemeNorm] = { col_gray3, col_gray1, col_gray2 },
@@ -27,8 +27,8 @@ static const Rule rules[] = {
 	 *	WM_NAME(STRING) = title
 	 */
 	/* class      instance    title       tags mask     isfloating   monitor */
-	{ "Gimp",     NULL,       NULL,       0,            1,           -1 },
-	{ "Firefox",  NULL,       NULL,       0,            0,           -1 },
+	{ "Steam",    NULL,       NULL,       1 << 2,       0,           -1 },
+	{ "element-desktop",  NULL,       NULL,       1 << 1,            0,           -1 },
 };
 
 /* layout(s) */
@@ -40,10 +40,10 @@ static const int lockfullscreen = 1; /* 1 will force focus on the fullscreen win
 #include "gaplessgrid.c"
 static const Layout layouts[] = {
 	/* symbol     arrange function */
-	{ "[]=",      tile },    /* first entry is default */
 	{ "###",      gaplessgrid },
-	{ "><>",      NULL },    /* no layout function means floating behavior */
 	{ "[M]",      monocle },
+	{ "><>",      NULL },   
+	{ "[]=",      tile },   
 };
 
 /* key definitions */
