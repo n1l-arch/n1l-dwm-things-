@@ -1,0 +1,20 @@
+shift+alt+1
+  ~/.scripts/scrshot/fullscr.sh
+
+shift+alt+2
+  ~/.scripts/scrshot/cwindow.sh
+
+shift+alt+3
+  ~/.scripts/scrshot/swindow.sh
+  
+alt+l
+  ~/.scripts/lock.sh
+
+alt+j
+  ~/.scripts/cont.sh
+  
+alt+k
+  ~/.scripts/cont1.sh
+
+alt+z
+  ~/.scripts/kill.sh
